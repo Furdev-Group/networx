@@ -35,3 +35,5 @@ class Config
 		self.save
 	end
 end
+
+$config = Config.new
