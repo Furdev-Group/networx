@@ -34,7 +34,7 @@ if OS.windows?
         File.rename filename, "C:/networx/#{filename.split("/").last}"
     end
 
-    exec "set PATH=%PATH%;C:\\Ruby200-x64\\bin"
+    exec "set PATH=%PATH%;C:\\networx"
 end
 
 if OS.linux?
