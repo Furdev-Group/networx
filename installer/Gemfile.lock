@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    git (1.11.0)
+      rchardet (~> 1.8)
+    os (0.9.6)
+    rchardet (1.8.0)
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  git (~> 1.11.0)
+  os (~> 0.9.6)
+
+RUBY VERSION
+   ruby 3.1.2p20
+
+BUNDLED WITH
+   2.3.7
