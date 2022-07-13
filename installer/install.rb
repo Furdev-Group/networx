@@ -17,7 +17,7 @@ if OS.windows?
     File.directory?("./networx") ? exists_error = true : nil
 
     exists_error ? puts("Install Error: Repostory already exists in directory, would you like to delete it? (y/n)") : nil
-    exists_error ? confirm = get.chomp : nil
+    exists_error ? confirm = gets.chomp : nil
 
     if exists_error && confirm == "y"
         FileUtils.rm_rf "./networx" 
