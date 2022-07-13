@@ -35,8 +35,7 @@ if OS.windows?
         FileUtils.mv filename, "C:/networx/"
     end
 
-    File.rm "./.gitignore"
-    Dir.rmdir "./networx"
+    FileUtils.rm_rf "./networx"
 
     exec 'setx PATH %PATH%;C:/networx/'
 
