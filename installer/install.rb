@@ -32,7 +32,7 @@ if OS.windows?
 
     temp = Dir[Dir.getwd + "/networx/*"]
     temp.each do |filename|
-        FileUtils.mv filename, "C:/networx/"
+        FileUtils.mv filename.to_s, "C:/networx/"
     end
 
     FileUtils.rm_rf "./networx"
