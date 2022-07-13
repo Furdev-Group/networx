@@ -37,7 +37,7 @@ if OS.windows?
 
     FileUtils.rm_rf "./networx"
 
-    exec 'setx PATH "%PATH%;C:/networx/"'
+    exec 'setx PATH "%PATH%;C:\networx\"'
 
 end
 
