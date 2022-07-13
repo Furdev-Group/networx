@@ -7,9 +7,9 @@ def connection_status
 			logo
 
 			time = Time.now
-			puts "[#{time}]".black.on_white + " " + "USING HOST: #{$config.host} INTERVAL: #{$config.interval}s".black.on_white
+			puts "[#{time}]" + " " + "USING HOST: #{$config.host} INTERVAL: #{$config.interval}s"
 			status = Net::Ping::External.new($config.host).ping
-			puts "[#{time}]".black.on_white + " " + (status ? "CONNECTION: UP".on_green : "CONNECTION: DOWN".on_red).black
+			puts "[#{time}]" + " " + (status ? "CONNECTION: UP".on_green : "CONNECTION: DOWN".on_red).black
 
 			puts "\nx to return".light_black
 
