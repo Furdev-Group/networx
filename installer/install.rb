@@ -23,9 +23,9 @@ if OS.windows?
         FileUtils.rm_rf "./networx" 
     end
 
-    puts "Cloneing Repository..."
+    puts "Cloning Repository..."
     Git.clone "https://github.com/Furdev-Group/networx.git", "networx"
-    puts "Cloneing Finished"
+    puts "Cloning Finished"
 
     puts "Moving files..."
     File.directory? "C:/networx"
