@@ -33,14 +33,18 @@ if OS.windows?
 	puts "Install Info [1]: If you expirence issues running Networx: try using 'bundle' to install the dependencies while in the install folder"
 	puts "Install Info [2]: If this fails to fix the issue, please create an issue on github at: https://github.com/Furdev-Group/networx/issues"
 	exec "bundle >nul"
-
+	exit
     	
 end
 
 if OS.linux?
 	puts "Install Failed: Unsupported OS"
+	exit
 end
 
 if OS.mac?
 	puts "Install Failed: Unsupported OS"
+	exit
 end
+
+puts "Install Failed: Unsupported OS"
