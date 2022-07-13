@@ -28,6 +28,7 @@ if OS.windows?
 	File.delete "C:/networx/.gitignore"
 	FileUtils.remove_dir("C:/networx/.git")
     FileUtils.remove_dir("C:/networx/installer")
+	FileUtils.remove_dir("C:/networx/readme-assets")
 
 	puts "Install Completed: Please add C:/networx to your PATH variable, here is a guide: https://windowsloop.com/how-to-add-to-windows-path/"
 	puts "Install Info [1]: If you expirence issues running Networx: try using 'bundle' to install the dependencies while in the install folder"
