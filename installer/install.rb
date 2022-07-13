@@ -6,8 +6,8 @@ if OS.windows?
     if File.directory? "C:/networx" 
         puts "Networx is already installed. would you like to reinstall it? (y/n)"
         confim = gets.chomp
-        if confim == "y"
-            FileUtils.rm_rf "C:/networx"
+        if confim === "y"
+            FileUtils.remove_dir "C:\\networx"
         else
             puts "Install Failed: User did not confirm reinstall, exiting..."
             exit
@@ -28,17 +28,13 @@ if OS.windows?
     puts "Cloning Finished"
 
     puts "Moving files..."
-    File.directory? "C:/networx"
 
     temp = Dir[Dir.getwd + "/networx/*"]
     temp.each do |filename|
-        FileUtils.mv filename.to_s, "C:/networx/"
+        File.rename filename, "C:/networx/#{filename.split("/").last}"
     end
 
-    FileUtils.rm_rf "./networx"
-
-    exec 'setx PATH "%PATH%;C:\networx\"'
-
+    exec "set PATH=%PATH%;C:\\Ruby200-x64\\bin"
 end
 
 if OS.linux?
@@ -46,9 +42,5 @@ if OS.linux?
 end
 
 if OS.mac?
-    puts "Install Failed: Unsupported OS"
-end
-
-if OS.unknown?
     puts "Install Failed: Unsupported OS"
 end
