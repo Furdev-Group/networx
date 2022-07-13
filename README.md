@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/Furdev-Group/networx/main/readme-assets/banner.png)
 # Networx
 ## A network connectivity suite
 Written in Ruby and designed with a simple ncurses style menu. 
