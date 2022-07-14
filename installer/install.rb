@@ -1,8 +1,10 @@
-require 'os'
+require 'tty-platform'
 require 'git'
 require 'fileutils'
 
-if OS.windows?
+platform = TTY::Platform.new
+
+if platform.windows?
 	if File.directory? "C:/networx" 
 		puts "Networx is already installed. would you like to reinstall it? (y/n)"
 		confim = gets.chomp
@@ -39,7 +41,7 @@ if OS.windows?
     	
 end
 
-if OS.linux?
+if platform.linux?
 	puts "Linux support is currently experimental, are you sure you want to continue? (y/n)"
 	confim_exp = gets.chomp
 
@@ -84,13 +86,13 @@ if OS.linux?
 	path.write("export PATH=$PATH:/usr/bin/networx")
 	path.flush
 	path.close
-	
+
 	exec "bundle >nul"
 
 	exit
 end
 
-if OS.mac?
+if platform.mac?
 	puts "Install Failed: MacOS support is coming soon!"
 	exit
 end
