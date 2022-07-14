@@ -79,7 +79,12 @@ if OS.linux?
 	puts "Install Completed: See messages below for more info"
 	puts "Install Info [1]: If you expirence issues running Networx: try using 'bundle' to install the dependencies while in the install folder (/usr/bin/networx)"
 	puts "Install Info [2]: If this fails to fix the issue, please create an issue on github at: https://github.com/Furdev-Group/networx/issues"
-	exec "export PATH=/usr/bin/networx:$PATH"
+	
+	path = File.new("/etc/profile.d/networx.sh", "w+")
+	path.write("export PATH=$PATH:/usr/bin/networx")
+	path.flush
+	path.close
+	
 	exec "bundle >nul"
 
 	exit
