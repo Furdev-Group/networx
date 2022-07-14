@@ -10,9 +10,22 @@ Written in Ruby and designed with a simple ncurses style menu.
 - [Features](#features)
 
 ## Installation
-Download the latest version from releases, the name should look something like this: ``networx-installer-latest.zip``, extract it and run ``bundle`` in the extracted folder, then run ``ruby install.rb``. Please note Windows users must add the install to their PATH manually.
+Download the latest version from releases, the name should look something like this: ``networx-installer-latest.zip``, extract it and run ``bundle`` in the extracted folder, then run ``ruby install.rb``.
 
 Another thing of note is that the installer will automaticlly detect your Operating system so there is no need for different installers for different Operating systems, but do keep in mind that only some Operating systems are supported and trying to install Networx on an unsupported Operating system will only result in an error.
+
+### Installing on Windows
+
+You must run the installer from a terminal with UAC permissions, or you will get a permission error when trying to install Networx. You must also manually add Networx to your system PATH so it can be run from anywhere: as shown [here.](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/)
+
+### Installing on Linux
+
+Pre-fix the install command with your prefered permission escalation tool such as ``doas`` or ``sudo``.
+
+### Installing on MacOS
+
+``Coming soon``
+
 ## Usage
 Run ``ruby main.rb`` in the folder that contains networx, or if instaled using the installer, just run ``networx`` anywhere
 ## Features
