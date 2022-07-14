@@ -1,4 +1,4 @@
-ruby "3.1.2"
+ruby "~> 3"
 source "https://rubygems.org"
 
 gem "net-ping", "~> 2.0.8"
