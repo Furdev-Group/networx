@@ -28,7 +28,7 @@ Please note that Linux support is experimental and may be buggy or even broken a
 ``Coming soon``
 
 ## Usage
-Run ``ruby main.rb`` in the folder that contains networx, or if instaled using the installer, just run ``networx`` anywhere
+Run ``ruby main.rb`` in the folder that contains networx, or if installed using the installer, just run ``networx`` anywhere
 ## Features
 - Built-in internet speedtest
 - Internet connectivity checker
