@@ -21,6 +21,7 @@ You must run the installer from a terminal with UAC permissions, or you will get
 ### Installing on Linux
 
 Pre-fix the install command with your prefered permission escalation tool such as ``doas`` or ``sudo``.
+Please note that Linux support is experimental and may be buggy or even broken at times.
 
 ### Installing on MacOS
 
